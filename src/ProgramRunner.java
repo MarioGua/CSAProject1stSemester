@@ -6,9 +6,10 @@ public class ProgramRunner {
         UIHandler ui = new UIHandler();
         Object UiFrame = ui.getFrame();
         ui.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ui.showFrame("Hello, this is a project for csa", "Project");
-        String Name  = ui.showInputFrame("What's you're name?", "Project");
+        ui.showInfoFrame("Hello, this is a project for csa", "Project");
+        String Name  = ui.showQuestionFrame("What's you're name?", "Project");
         System.out.println(Name);
+
 
     }
 }

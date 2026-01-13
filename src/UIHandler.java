@@ -1,29 +1,38 @@
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 
-
 public class UIHandler {
-    private JFrame frame = new JFrame("Frame");
+    final private JFrame frame = new JFrame("Frame");
 
 
-    public UIHandler(){ }
+    public UIHandler(){
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
+    }
 
     public JFrame getFrame() {
         return frame;
     }
 
-    public void showFrame(String message, String title){
+    public void showInfoFrame(String message, String title){
         JOptionPane.showMessageDialog(frame,
                 message,
                 title,
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public String showInputFrame(String message, String title){
+    public String showQuestionFrame(String message, String title){
         String name = JOptionPane.showInputDialog(frame,
                 message,
                 title,
                 JOptionPane.QUESTION_MESSAGE);
+        return name;
+    }
+
+    public String showWarningFrame(String message, String title){
+        String name = JOptionPane.showInputDialog(frame,
+                message,
+                title,
+                JOptionPane.WARNING_MESSAGE);
         return name;
     }
 
