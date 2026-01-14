@@ -21,19 +21,17 @@ public class UIHandler {
     }
 
     public String showQuestionFrame(String message, String title){
-        String name = JOptionPane.showInputDialog(frame,
+        return JOptionPane.showInputDialog(frame,
                 message,
                 title,
                 JOptionPane.QUESTION_MESSAGE);
-        return name;
     }
 
     public String showWarningFrame(String message, String title){
-        String name = JOptionPane.showInputDialog(frame,
+        return JOptionPane.showInputDialog(frame,
                 message,
                 title,
                 JOptionPane.WARNING_MESSAGE);
-        return name;
     }
 
 }
