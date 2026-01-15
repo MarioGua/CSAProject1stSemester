@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-
-
 public class Player {
     private String name = "";
     private String currentItem = "";
 
+    private int currentHunger = 100
     private int currentHealth = 100;
     private int maxInventorySpace = 10;
 
@@ -14,6 +13,10 @@ public class Player {
     public Player(String name, int maxInventorySpace){
         this.name = name;
         this.maxInventorySpace = maxInventorySpace;
+    }
+
+    public Player(){
+        name = "Default-10";
     }
 
 
@@ -37,10 +40,7 @@ public class Player {
     public int getCurrentHealth() {
         return currentHealth;
     }
-
-    public void setCurrentHealth(int currentHealth) {
-        this.currentHealth = currentHealth;
-    }
+    public int getCurrentHunger(){ return currentHunger;}
 
     public int getMaxInventorySpace() {
         return maxInventorySpace;
@@ -57,6 +57,8 @@ public class Player {
     public void setInventory(ArrayList<String> inventory) {
         this.inventory = inventory;
     }
+
+
 
 
 
