@@ -3,5 +3,6 @@ public class GameRunner {
         Player player = new Player();
         System.out.println(player.getCurrentHealth());
         System.out.println(player.getName());
+
     }
 }
