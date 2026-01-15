@@ -3,6 +3,7 @@ import java.util.Map;
 
 public class Locations {
     private Map<String, String> Locations = new HashMap<>();
+    private Map<String, String[]> Attributes = new HashMap<>();
     private String currentLocation = "";
 
 

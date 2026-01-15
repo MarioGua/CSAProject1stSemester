@@ -4,7 +4,7 @@ public class Player {
     private String name = "";
     private String currentItem = "";
 
-    private int currentHunger = 100
+    private int currentHunger = 100;
     private int currentHealth = 100;
     private int maxInventorySpace = 10;
 
