@@ -1,18 +1,25 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Player {
     private String name = "";
     private String currentItem = "";
 
-    private int currentHunger = 100;
+    private int thirstLevel = 100;
     private int currentHealth = 100;
     private int maxInventorySpace = 10;
 
     private ArrayList<String> inventory = new ArrayList<>();
 
+
     public Player(String name, int maxInventorySpace){
         this.name = name;
         this.maxInventorySpace = maxInventorySpace;
+    }
+
+    public Player(String name){
+        this.name = name;
     }
 
     public Player(){
@@ -40,24 +47,25 @@ public class Player {
     public int getCurrentHealth() {
         return currentHealth;
     }
-    public int getCurrentHunger(){ return currentHunger;}
+    public int getThirstLevel(){ return thirstLevel;}
 
     public int getMaxInventorySpace() {
         return maxInventorySpace;
-    }
-
-    public void setMaxInventorySpace(int maxInventorySpace) {
-        this.maxInventorySpace = maxInventorySpace;
     }
 
     public ArrayList<String> getInventory() {
         return inventory;
     }
 
-    public void setInventory(ArrayList<String> inventory) {
-        this.inventory = inventory;
+
+
+    public void removeItemFromInventory(String item){
+        inventory.add(item);
     }
 
+    public void addItemFromInventory(Item item){
+        inventory.remove(item);
+    }
 
 
 
